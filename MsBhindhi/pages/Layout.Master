@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.Master.cs" Inherits="Lab_6.Lab6" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ms Bhindhi</title>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--<a name="Home"></a>--%>
+
+        <div class="navbar">
+            <asp:Image ImageUrl="~/images/ms-transparent.png" runat="server" />
+
+            <ul class="navbar-container">
+                <li><a href="Home.aspx">
+                    <ion-icon name="beer-outline"></ion-icon>
+                    Home</a></li>
+                <li><a href="Restaurants.aspx">
+                    <ion-icon name="restaurant-outline"></ion-icon>
+                    Restaurants</a></li>
+                <li><a href="RestaurantManagement.aspx">
+                    <ion-icon name="wallet-outline"></ion-icon>
+                    Restaurant Management</a></li>
+                <li><a href="Orders.aspx">
+                    <ion-icon name="fast-food-outline"></ion-icon>
+                    Orders</a></li>
+                <li><a href="Settings.aspx">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    Settings</a></li>
+                <li><a href="ItemManagement.aspx">
+                    <ion-icon name="wallet-outline"></ion-icon>
+                    Item Management</a></li>
+            </ul>
+
+            <div class="navbar-logout">
+                <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                    Log Out
+                </asp:LinkButton>
+            </div>
+
+        </div>
+
+        <div class="profile">
+<%--            <a class="feedback" href="Feedback.aspx">
+                <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+            </a>--%>
+            <a class="notification-icon" href="Notifications.aspx">
+                <ion-icon name="notifications-outline"></ion-icon>
+            </a>
+            <a class="cart" href="Cart.aspx">
+                <ion-icon name="cart-outline"></ion-icon>
+            </a>
+            <a class="user" href="Profile.aspx">
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </a>
+        </div>
+
+        <asp:ContentPlaceHolder ID="PageArea" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
